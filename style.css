@@ -1,5 +1,5 @@
 /* =========================================
-   RESET & VARIABLES
+   RESET
 ========================================= */
 
 * {
@@ -12,13 +12,18 @@
     --wine: #651b32;
     --deep-wine: #3b101d;
     --wine-light: #812c48;
+
     --gold: #c9a15a;
     --gold-light: #e0c486;
+
     --cream: #faf3e8;
     --cream-dark: #f0e3d3;
+
     --white: #fffdf9;
+
     --text: #4c3b40;
     --muted: #806d73;
+
     --shadow: 0 20px 55px rgba(59, 16, 29, 0.12);
 }
 
@@ -39,7 +44,9 @@ a {
 }
 
 button,
-input {
+input,
+select,
+textarea {
     font-family: inherit;
 }
 
@@ -52,25 +59,32 @@ input {
     position: fixed;
     top: 0;
     left: 0;
+
     width: 100%;
     height: 72px;
+
     padding: 0 6%;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     z-index: 1000;
 
     background: rgba(59, 16, 29, 0.88);
     backdrop-filter: blur(14px);
+
     border-bottom: 1px solid rgba(201, 161, 90, 0.18);
 }
 
 .logo {
     text-decoration: none;
+
     font-family: "Cormorant Garamond", serif;
     font-size: 30px;
-    color: var(--white);
     letter-spacing: 2px;
+
+    color: var(--white);
 }
 
 .logo span {
@@ -85,10 +99,13 @@ input {
 
 .nav-links a {
     text-decoration: none;
+
     color: #eadbd4;
+
     font-size: 10px;
     letter-spacing: 1.8px;
     text-transform: uppercase;
+
     transition: 0.3s ease;
 }
 
@@ -98,10 +115,13 @@ input {
 
 .menu-btn {
     display: none;
+
     border: none;
     background: transparent;
+
     color: var(--white);
     font-size: 24px;
+
     cursor: pointer;
 }
 
@@ -112,11 +132,15 @@ input {
 
 .hero {
     min-height: 100vh;
+
     position: relative;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     text-align: center;
+
     overflow: hidden;
 
     color: var(--white);
@@ -142,22 +166,32 @@ input {
 
 .hero::before {
     content: "";
+
     position: absolute;
+
     width: 600px;
     height: 600px;
+
     border: 1px solid rgba(201, 161, 90, 0.25);
+
     border-radius: 50%;
+
     top: -330px;
     left: -250px;
 }
 
 .hero::after {
     content: "";
+
     position: absolute;
+
     width: 500px;
     height: 500px;
+
     border: 1px solid rgba(201, 161, 90, 0.22);
+
     border-radius: 50%;
+
     right: -260px;
     bottom: -280px;
 }
@@ -165,55 +199,78 @@ input {
 .hero-content {
     position: relative;
     z-index: 2;
+
     width: min(900px, 92%);
+
     padding: 110px 20px 70px;
 }
 
 .eyebrow,
 .section-label {
     color: var(--gold);
+
     font-size: 10px;
     font-weight: 600;
+
     letter-spacing: 4px;
 }
 
 .hero-small {
     margin-top: 25px;
+
     color: #d8c2b9;
+
     font-size: 9px;
     letter-spacing: 3px;
 }
 
 .hero h1 {
     margin: 25px 0;
+
     font-family: "Cormorant Garamond", serif;
+
     font-size: clamp(78px, 13vw, 155px);
+
     font-weight: 500;
+
     line-height: 0.72;
+
     letter-spacing: -2px;
 }
 
 .hero h1 span {
     display: block;
+
     margin: 20px 0;
+
     color: var(--gold);
+
     font-size: 0.38em;
+
     font-style: italic;
+
     line-height: 1;
 }
 
 .invite-text {
     width: min(550px, 100%);
+
     margin: 0 auto 35px;
+
     color: #eadbd4;
+
     font-size: 14px;
 }
 
 .hero-date {
     display: inline-flex;
+
     align-items: center;
+
     gap: 18px;
+
     padding: 15px 30px;
+
     margin-bottom: 32px;
 
     border-top: 1px solid rgba(201, 161, 90, 0.65);
@@ -222,8 +279,11 @@ input {
 
 .date-number {
     font-family: "Cormorant Garamond", serif;
+
     font-size: 55px;
+
     line-height: 1;
+
     color: var(--gold);
 }
 
@@ -233,19 +293,25 @@ input {
 
 .date-info strong {
     display: block;
+
     font-size: 11px;
+
     letter-spacing: 3px;
 }
 
 .date-info span {
     color: #dbc6bc;
+
     font-size: 12px;
 }
 
 .hero-buttons {
     display: flex;
+
     justify-content: center;
+
     gap: 12px;
+
     flex-wrap: wrap;
 }
 
@@ -257,18 +323,24 @@ input {
 .primary-btn,
 .outline-btn {
     display: inline-flex;
+
     align-items: center;
     justify-content: center;
 
     min-height: 48px;
+
     padding: 13px 25px;
 
     border: none;
+
     text-decoration: none;
+
     cursor: pointer;
 
     font-size: 10px;
+
     font-weight: 600;
+
     letter-spacing: 1.5px;
 
     transition:
@@ -279,43 +351,58 @@ input {
 
 .primary-btn {
     background: var(--gold);
+
     color: #2f1720;
 }
 
 .primary-btn:hover {
     transform: translateY(-3px);
+
     background: var(--gold-light);
-    box-shadow: 0 12px 25px rgba(201, 161, 90, 0.25);
+
+    box-shadow:
+        0 12px 25px rgba(201, 161, 90, 0.25);
 }
 
 .outline-btn {
     background: transparent;
+
     border: 1px solid var(--gold);
+
     color: var(--gold-light);
 }
 
 .outline-btn:hover {
     transform: translateY(-3px);
+
     background: var(--gold);
+
     color: var(--deep-wine);
 }
 
 .scroll-down {
     position: absolute;
+
     bottom: 25px;
     left: 50%;
+
     z-index: 3;
+
     transform: translateX(-50%);
 
     color: #d9c4ba;
+
     font-size: 8px;
+
     letter-spacing: 3px;
 }
 
 .scroll-down div {
     width: 1px;
     height: 42px;
+
     margin: 8px auto 0;
+
     background: var(--gold);
 }
 
@@ -326,8 +413,11 @@ input {
 
 .intro {
     max-width: 850px;
+
     margin: auto;
+
     padding: 120px 25px;
+
     text-align: center;
 }
 
@@ -339,11 +429,15 @@ input {
 .wedding-day h2,
 .rsvp h2 {
     margin: 18px 0;
+
     color: var(--wine);
 
     font-family: "Cormorant Garamond", serif;
+
     font-size: clamp(44px, 6vw, 72px);
+
     font-weight: 500;
+
     line-height: 0.95;
 }
 
@@ -353,33 +447,46 @@ em {
 
 .intro-text {
     max-width: 620px;
+
     margin: 28px auto;
+
     color: var(--muted);
+
     font-size: 14px;
 }
 
 .intro-divider {
     display: flex;
+
     justify-content: center;
     align-items: center;
+
     gap: 15px;
+
     margin: 35px auto 20px;
+
     color: var(--gold);
 }
 
 .intro-divider::before,
 .intro-divider::after {
     content: "";
+
     width: 70px;
     height: 1px;
+
     background: var(--gold);
+
     opacity: 0.5;
 }
 
 .intro-quote {
     color: var(--wine);
+
     font-family: "Cormorant Garamond", serif;
+
     font-size: 22px;
+
     font-style: italic;
 }
 
@@ -390,7 +497,9 @@ em {
 
 .couple {
     padding: 105px 20px;
+
     background: var(--white);
+
     text-align: center;
 }
 
@@ -400,8 +509,10 @@ em {
 
 .couple-container {
     display: flex;
+
     align-items: center;
     justify-content: center;
+
     gap: 70px;
 }
 
@@ -412,16 +523,20 @@ em {
 .initial {
     width: 110px;
     height: 110px;
+
     margin: auto;
 
     display: grid;
     place-items: center;
 
     border: 1px solid var(--gold);
+
     border-radius: 50%;
 
     color: var(--gold);
+
     font-family: "Cormorant Garamond", serif;
+
     font-size: 52px;
 
     box-shadow:
@@ -430,21 +545,29 @@ em {
 
 .role {
     margin-top: 25px;
+
     color: var(--gold);
+
     font-size: 9px;
+
     letter-spacing: 3px;
 }
 
 .couple-card h3 {
     margin: 10px 0;
+
     color: var(--wine);
+
     font-family: "Cormorant Garamond", serif;
+
     font-size: 34px;
+
     font-weight: 600;
 }
 
 .couple-card p:last-child {
     color: var(--muted);
+
     font-size: 12px;
 }
 
@@ -456,10 +579,13 @@ em {
     place-items: center;
 
     border: 1px solid rgba(201, 161, 90, 0.5);
+
     border-radius: 50%;
 
     color: var(--gold);
+
     font-family: "Cormorant Garamond", serif;
+
     font-size: 35px;
 }
 
@@ -470,43 +596,58 @@ em {
 
 .countdown-section {
     padding: 110px 20px;
+
     text-align: center;
+
     background: var(--cream-dark);
 }
 
 .countdown {
     display: flex;
+
     justify-content: center;
+
     gap: 15px;
+
     margin-top: 50px;
+
     flex-wrap: wrap;
 }
 
 .count-box {
     width: 125px;
+
     padding: 25px 10px;
 
     background: var(--white);
+
     border: 1px solid rgba(101, 27, 50, 0.1);
 
-    box-shadow: 0 8px 25px rgba(59, 16, 29, 0.05);
+    box-shadow:
+        0 8px 25px rgba(59, 16, 29, 0.05);
 }
 
 .count-box strong {
     display: block;
 
     color: var(--wine);
+
     font-family: "Cormorant Garamond", serif;
+
     font-size: 48px;
+
     line-height: 1;
 }
 
 .count-box span {
     display: block;
+
     margin-top: 9px;
 
     color: var(--gold);
+
     font-size: 8px;
+
     letter-spacing: 2px;
 }
 
@@ -521,21 +662,27 @@ em {
 
 .section-heading {
     max-width: 680px;
+
     margin: 0 auto 65px;
+
     text-align: center;
 }
 
 .section-heading > p:last-child {
     color: var(--muted);
+
     font-size: 13px;
 }
 
 .event-grid {
     max-width: 1200px;
+
     margin: auto;
 
     display: grid;
+
     grid-template-columns: repeat(3, 1fr);
+
     gap: 20px;
 }
 
@@ -543,9 +690,11 @@ em {
     position: relative;
 
     min-height: 390px;
+
     padding: 42px 27px 30px;
 
     background: var(--white);
+
     border: 1px solid #eadbd0;
 
     text-align: center;
@@ -558,17 +707,22 @@ em {
 
 .event-card:hover {
     transform: translateY(-9px);
+
     border-color: rgba(201, 161, 90, 0.65);
+
     box-shadow: var(--shadow);
 }
 
 .event-number {
     position: absolute;
+
     top: 16px;
     right: 18px;
 
     color: var(--gold);
+
     font-size: 9px;
+
     letter-spacing: 1px;
 }
 
@@ -576,13 +730,17 @@ em {
     margin: 12px 0 15px;
 
     color: var(--gold);
+
     font-size: 30px;
 }
 
 .event-day {
     color: var(--gold);
+
     font-size: 8px;
+
     font-weight: 600;
+
     letter-spacing: 2px;
 }
 
@@ -590,22 +748,29 @@ em {
     margin: 8px 0;
 
     color: var(--wine);
+
     font-family: "Cormorant Garamond", serif;
+
     font-size: 34px;
+
     font-weight: 600;
 }
 
 .event-time {
     color: var(--wine);
+
     font-size: 11px;
+
     font-weight: 600;
 }
 
 .event-description {
     min-height: 75px;
+
     margin: 15px 0;
 
     color: var(--muted);
+
     font-size: 11px;
 }
 
@@ -613,13 +778,17 @@ em {
     padding: 11px 18px;
 
     background: transparent;
+
     border: 1px solid rgba(201, 161, 90, 0.7);
 
     color: var(--wine);
+
     cursor: pointer;
 
     font-size: 9px;
+
     font-weight: 600;
+
     letter-spacing: 1px;
 
     transition: 0.3s ease;
@@ -627,6 +796,7 @@ em {
 
 .event-btn:hover {
     background: var(--gold);
+
     color: var(--deep-wine);
 }
 
@@ -664,10 +834,12 @@ em {
     min-height: 650px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
     text-align: center;
+
     color: var(--white);
 
     background:
@@ -684,6 +856,7 @@ em {
 
 .venue-content {
     width: min(700px, 90%);
+
     padding: 70px 20px;
 }
 
@@ -694,6 +867,7 @@ em {
 .venue-line {
     width: 80px;
     height: 1px;
+
     margin: 28px auto;
 
     background: var(--gold);
@@ -701,16 +875,21 @@ em {
 
 .venue-type {
     color: var(--gold-light);
+
     font-size: 11px;
+
     letter-spacing: 2px;
+
     text-transform: uppercase;
 }
 
 .venue-description {
     max-width: 560px;
+
     margin: 18px auto;
 
     color: #d9c7c1;
+
     font-size: 13px;
 }
 
@@ -718,14 +897,19 @@ em {
     margin: 25px 0 30px;
 
     color: #eee0d9;
+
     font-family: "Cormorant Garamond", serif;
+
     font-size: 22px;
 }
 
 .venue-buttons {
     display: flex;
+
     justify-content: center;
+
     gap: 12px;
+
     flex-wrap: wrap;
 }
 
@@ -736,6 +920,7 @@ em {
 
 .wedding-day {
     position: relative;
+
     padding: 125px 20px;
 
     text-align: center;
@@ -751,6 +936,7 @@ em {
 
 .wedding-day-content {
     max-width: 700px;
+
     margin: auto;
 }
 
@@ -760,18 +946,23 @@ em {
 
 .wedding-day-content > p:not(.section-label) {
     max-width: 600px;
+
     margin: 25px auto 30px;
 
     color: var(--muted);
+
     font-size: 14px;
 }
 
 .main-time {
     display: inline-flex;
+
     align-items: center;
+
     gap: 12px;
 
     margin-bottom: 30px;
+
     padding: 12px 24px;
 
     border-top: 1px solid var(--gold);
@@ -780,13 +971,17 @@ em {
 
 .main-time span {
     color: var(--wine);
+
     font-family: "Cormorant Garamond", serif;
+
     font-size: 34px;
 }
 
 .main-time small {
     color: var(--gold);
+
     font-size: 9px;
+
     letter-spacing: 2px;
 }
 
@@ -797,16 +992,85 @@ em {
 
 .rsvp {
     padding: 120px 20px;
+
     text-align: center;
+
     background: var(--white);
 }
 
 .rsvp > p:not(.section-label) {
     max-width: 500px;
+
     margin: 20px auto 30px;
 
     color: var(--muted);
+
     font-size: 13px;
+}
+
+
+/* =========================================
+   RSVP FORM
+========================================= */
+
+.rsvp-form {
+    width: min(500px, 100%);
+
+    margin: 35px auto 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+.rsvp-form input,
+.rsvp-form select,
+.rsvp-form textarea {
+    width: 100%;
+
+    padding: 15px 16px;
+
+    border: 1px solid #ddcfc5;
+
+    outline: none;
+
+    background: #fffaf5;
+
+    color: var(--text);
+
+    font-size: 12px;
+
+    transition: 0.3s ease;
+}
+
+.rsvp-form input::placeholder,
+.rsvp-form textarea::placeholder {
+    color: #a18f93;
+}
+
+.rsvp-form input:focus,
+.rsvp-form select:focus,
+.rsvp-form textarea:focus {
+    border-color: var(--gold);
+
+    box-shadow:
+        0 5px 18px rgba(201, 161, 90, 0.08);
+}
+
+.rsvp-form textarea {
+    resize: vertical;
+
+    min-height: 100px;
+}
+
+.rsvp-form select {
+    cursor: pointer;
+}
+
+.rsvp-form .primary-btn {
+    margin-top: 5px;
 }
 
 
@@ -820,12 +1084,15 @@ footer {
     text-align: center;
 
     background: #241019;
+
     color: #cdbbb5;
 }
 
 .footer-names {
     color: var(--white);
+
     font-family: "Cormorant Garamond", serif;
+
     font-size: 35px;
 }
 
@@ -837,6 +1104,7 @@ footer p {
     margin-top: 8px;
 
     font-size: 8px;
+
     letter-spacing: 2px;
 }
 
@@ -847,26 +1115,32 @@ footer p {
 
 .modal {
     position: fixed;
+
     inset: 0;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
     padding: 20px;
 
     background: rgba(30, 10, 17, 0.75);
+
     backdrop-filter: blur(7px);
 
     opacity: 0;
+
     visibility: hidden;
 
     transition: 0.3s ease;
+
     z-index: 2000;
 }
 
 .modal.active {
     opacity: 1;
+
     visibility: visible;
 }
 
@@ -874,15 +1148,18 @@ footer p {
     position: relative;
 
     width: min(500px, 100%);
+
     padding: 50px 35px;
 
     background: var(--white);
 
     text-align: center;
 
-    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25);
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.25);
 
     transform: translateY(20px);
+
     transition: 0.3s ease;
 }
 
@@ -892,6 +1169,7 @@ footer p {
 
 .modal-close {
     position: absolute;
+
     top: 15px;
     right: 18px;
 
@@ -899,9 +1177,11 @@ footer p {
     height: 35px;
 
     border: none;
+
     background: transparent;
 
     color: var(--wine);
+
     font-size: 28px;
 
     cursor: pointer;
@@ -911,44 +1191,23 @@ footer p {
     margin: 15px 0;
 
     color: var(--wine);
+
     font-family: "Cormorant Garamond", serif;
+
     font-size: 45px;
 }
 
 .modal-content > p:not(.section-label):not(.rsvp-message) {
     margin-bottom: 18px;
+
     color: var(--muted);
+
     font-size: 13px;
 }
 
 #modalDate {
     color: var(--gold) !important;
-    font-weight: 600;
-}
 
-.modal-content input {
-    width: 100%;
-
-    margin: 15px 0 20px;
-    padding: 14px 15px;
-
-    border: 1px solid #ddcfc5;
-    outline: none;
-
-    background: #fffaf5;
-    color: var(--text);
-
-    font-size: 13px;
-}
-
-.modal-content input:focus {
-    border-color: var(--gold);
-}
-
-.rsvp-message {
-    margin-top: 20px;
-    color: var(--wine);
-    font-size: 12px;
     font-weight: 600;
 }
 
@@ -977,17 +1236,22 @@ footer p {
 
     .navbar {
         height: 65px;
+
         padding: 0 20px;
     }
 
     .nav-links {
         position: absolute;
+
         top: 65px;
         left: 0;
+
         width: 100%;
 
         display: none;
+
         flex-direction: column;
+
         gap: 0;
 
         background: rgba(59, 16, 29, 0.97);
@@ -999,8 +1263,11 @@ footer p {
 
     .nav-links a {
         padding: 15px;
+
         text-align: center;
-        border-bottom: 1px solid rgba(201, 161, 90, 0.1);
+
+        border-bottom:
+            1px solid rgba(201, 161, 90, 0.1);
     }
 
     .menu-btn {
@@ -1031,6 +1298,7 @@ footer p {
 
     .couple-container {
         flex-direction: column;
+
         gap: 30px;
     }
 
@@ -1045,6 +1313,7 @@ footer p {
 
     .event-card {
         min-height: auto;
+
         padding: 42px 25px 30px;
     }
 
@@ -1058,6 +1327,7 @@ footer p {
 
     .count-box {
         width: 75px;
+
         padding: 20px 5px;
     }
 
@@ -1072,6 +1342,7 @@ footer p {
     .hero-buttons,
     .venue-buttons {
         flex-direction: column;
+
         align-items: center;
     }
 
