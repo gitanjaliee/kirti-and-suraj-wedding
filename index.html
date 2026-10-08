@@ -347,7 +347,7 @@
 
                 <p class="event-description">
                     A joyful celebration filled with laughter,
-                    blessings and the warmth of family.
+                    blessings, happiness and beautiful moments.
                 </p>
 
                 <button
@@ -386,8 +386,8 @@
                 </p>
 
                 <p class="event-description">
-                    An evening of beautiful mehndi,
-                    music, laughter and togetherness.
+                    An evening filled with beautiful mehndi,
+                    music, laughter and the warmth of family.
                 </p>
 
                 <button
@@ -466,8 +466,8 @@
                 </p>
 
                 <p class="event-description">
-                    A beautiful family celebration as we prepare
-                    for the most special day.
+                    A special family gathering as everyone
+                    comes together before the main wedding day.
                 </p>
 
                 <button
@@ -583,7 +583,7 @@
     </section>
 
 
-    <!-- ================= WEDDING DAY ================= -->
+    <!-- ================= MAIN WEDDING DAY ================= -->
 
     <section class="wedding-day">
 
@@ -611,7 +611,7 @@
             </div>
 
             <a href="#rsvp" class="primary-btn">
-                I’ll Be There
+                I’LL BE THERE
             </a>
 
         </div>
@@ -636,13 +636,103 @@
             celebration even more special.
         </p>
 
-        <button
-            class="primary-btn rsvp-button"
-            id="rsvpButton"
-            type="button"
+
+        <form
+            class="rsvp-form"
+            action="https://formsubmit.co/anjali.bathamcse2024@indoreinstitute.com"
+            method="POST"
         >
-            RSVP Now
-        </button>
+
+            <!-- EMAIL SETTINGS -->
+
+            <input
+                type="hidden"
+                name="_subject"
+                value="New Wedding RSVP - Kirti & Suraj"
+            >
+
+            <input
+                type="hidden"
+                name="_template"
+                value="table"
+            >
+
+            <input
+                type="hidden"
+                name="_captcha"
+                value="true"
+            >
+
+            <input
+                type="hidden"
+                name="_next"
+                value="https://anjali2006coder.github.io/wedding-invitation/"
+            >
+
+
+            <!-- NAME -->
+
+            <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                autocomplete="name"
+                required
+            >
+
+
+            <!-- EMAIL -->
+
+            <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                autocomplete="email"
+                required
+            >
+
+
+            <!-- ATTENDANCE -->
+
+            <select
+                name="attendance"
+                required
+            >
+
+                <option value="" disabled selected>
+                    Will you attend?
+                </option>
+
+                <option value="Yes, I will be there">
+                    Yes, I'll be there ❤️
+                </option>
+
+                <option value="Sorry, I cannot attend">
+                    Sorry, I can't attend
+                </option>
+
+            </select>
+
+
+            <!-- MESSAGE -->
+
+            <textarea
+                name="message"
+                placeholder="A message for Kirti & Suraj (optional)"
+                rows="4"
+            ></textarea>
+
+
+            <!-- SUBMIT -->
+
+            <button
+                type="submit"
+                class="primary-btn"
+            >
+                CONFIRM RSVP
+            </button>
+
+        </form>
 
     </section>
 
@@ -662,7 +752,7 @@
     </footer>
 
 
-    <!-- ================= EVENT MODAL ================= -->
+    <!-- ================= EVENT DETAILS MODAL ================= -->
 
     <div
         class="modal"
@@ -702,64 +792,8 @@
                 id="modalOk"
                 type="button"
             >
-                Got it
+                GOT IT
             </button>
-
-        </div>
-
-    </div>
-
-
-    <!-- ================= RSVP MODAL ================= -->
-
-    <div
-        class="modal"
-        id="rsvpModal"
-        aria-hidden="true"
-    >
-
-        <div class="modal-content">
-
-            <button
-                class="modal-close"
-                id="rsvpClose"
-                type="button"
-                aria-label="Close"
-            >
-                ×
-            </button>
-
-            <p class="section-label">
-                RSVP
-            </p>
-
-            <h2>
-                We’d love to see you
-            </h2>
-
-            <p>
-                Please enter your name to confirm your presence.
-            </p>
-
-            <input
-                type="text"
-                id="guestName"
-                placeholder="Your name"
-                autocomplete="name"
-            >
-
-            <button
-                class="primary-btn"
-                id="confirmRsvp"
-                type="button"
-            >
-                Confirm RSVP
-            </button>
-
-            <p
-                class="rsvp-message"
-                id="rsvpMessage"
-            ></p>
 
         </div>
 
